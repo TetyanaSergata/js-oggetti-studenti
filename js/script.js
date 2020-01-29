@@ -12,26 +12,38 @@ for (var key in studente) {
 }
 
 var studenti = [
-  studente_1 = {
+  {
     'nome' : 'Andrea',
     'cognome' : 'Rossi',
     'eta' : 25
   },
-  studente_2 = {
+  {
     'nome' : 'Erica',
     'cognome' : 'Bianchi',
     'eta' : 26
   },
-  studente_3 = {
+  {
     'nome' : 'Marco',
     'cognome' : 'Alessi',
     'eta' : 23
   }
 ];
 
-for (var i = 0; i < studenti.length; i++) {
-  console.log(studenti[i]);
-  for (var key in studenti[i]) {
-    console.log();
-  }
+
+var nomeStudente = prompt('Inserisci il tuo nome');
+var cognomeStudente = prompt('Inserisci il tuo cognome');
+var etaStudente = prompt('Inserisci la tua età');
+
+var studente = {
+  'nome' : nomeStudente,
+  'cognome' : cognomeStudente,
+  'eta' : etaStudente
 }
+
+studenti.push(studente);
+
+for (var i = 0; i < studenti.length; i++) {
+  console.log(studenti[i].nome + ' - ' + studenti[i].cognome);
+}
+
+console.log(studenti[3].nome + '\n' + studenti[3].cognome);
